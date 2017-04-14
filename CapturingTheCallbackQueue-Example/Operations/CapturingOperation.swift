@@ -10,8 +10,8 @@ import Foundation
 
 class CapturingOperation: Operation {
     
-    var completion : ((_ successful: Bool) -> (Void))?
-    var callBackQueue: OperationQueue
+    let completion: ((_ successful: Bool) -> (Void))?
+    private let callBackQueue: OperationQueue
     
     //MARK: - Init
     
