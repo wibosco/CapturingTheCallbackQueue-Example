@@ -10,14 +10,14 @@ import Foundation
 
 class CapturingOperation: Operation {
     
-    let completion: ((_ successful: Bool) -> (Void))?
-    private let callBackQueue: OperationQueue
+    private let completion: ((_ result: Result<Bool, Error>) -> ())?
+    private let callbackQueue: OperationQueue?
     
     //MARK: - Init
-    
-    init(completion: ((_ successful: Bool) -> Void)?) {
+
+    init(callbackQueue: OperationQueue? = OperationQueue.current, completion: ((_ result: Result<Bool, Error>) -> ())?) {
         self.completion = completion
-        self.callBackQueue = OperationQueue.current!
+        self.callbackQueue = callbackQueue
         
         super.init()
     }
@@ -29,12 +29,13 @@ class CapturingOperation: Operation {
         
         sleep(2) //This is where this operation's actual work would be
         
-        callBackQueue.addOperation {
-            guard let completion = self.completion else {
-                return
+        let result = Result<Bool, Error>.success(true)
+        if let callbackQueue = callbackQueue {
+            callbackQueue.addOperation {
+                self.completion?(result)
             }
-            
-            completion(true)
+        } else {
+            completion?(result)
         }
     }
 }

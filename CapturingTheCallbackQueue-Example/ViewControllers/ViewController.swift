@@ -19,11 +19,12 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let operationA = CapturingOperation { (successful: Bool) in
-            self.updateLabel.text = "This label has been updated from the following queue: \(OperationQueue.current!)"
+        let operation = CapturingOperation { _ in
+            self.updateLabel.text = "This label has been updated"
+            self.updateLabel.textColor = .green
         }
         
-        queue.addOperation(operationA)
+        queue.addOperation(operation)
     }
 
 }
