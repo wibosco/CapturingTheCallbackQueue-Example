@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43467B152F6D6C0F00E5BFCE /* CapturingTheCallbackQueue_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43467B132F6D6C0F00E5BFCE /* CapturingTheCallbackQueue_ExampleTests.swift */; };
 		436B8F251EA1110F0037236B /* CapturingOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436B8F241EA1110F0037236B /* CapturingOperation.swift */; };
-		43A3AD5A1EA0E11400A5C10B /* CapturingTheCallbackQueue_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A3AD591EA0E11400A5C10B /* CapturingTheCallbackQueue_ExampleTests.swift */; };
 		43D7F4B41EA0E18B00D95D35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D7F4A91EA0E18B00D95D35 /* AppDelegate.swift */; };
 		43D7F4B61EA0E18B00D95D35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43D7F4AC1EA0E18B00D95D35 /* Assets.xcassets */; };
 		43D7F4B71EA0E18B00D95D35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43D7F4AE1EA0E18B00D95D35 /* LaunchScreen.storyboard */; };
@@ -27,10 +27,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		43467B132F6D6C0F00E5BFCE /* CapturingTheCallbackQueue_ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturingTheCallbackQueue_ExampleTests.swift; sourceTree = "<group>"; };
 		436B8F241EA1110F0037236B /* CapturingOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CapturingOperation.swift; sourceTree = "<group>"; };
 		43A3AD411EA0E11400A5C10B /* CapturingTheCallbackQueue-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CapturingTheCallbackQueue-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43A3AD551EA0E11400A5C10B /* CapturingTheCallbackQueue-ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CapturingTheCallbackQueue-ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		43A3AD591EA0E11400A5C10B /* CapturingTheCallbackQueue_ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturingTheCallbackQueue_ExampleTests.swift; sourceTree = "<group>"; };
 		43A3AD5B1EA0E11400A5C10B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43D7F4A91EA0E18B00D95D35 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43D7F4AA1EA0E18B00D95D35 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,6 +58,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43467B142F6D6C0F00E5BFCE /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				43467B132F6D6C0F00E5BFCE /* CapturingTheCallbackQueue_ExampleTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		436B8F1A1EA10A9E0037236B /* Operations */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,7 +107,7 @@
 		43A3AD581EA0E11400A5C10B /* CapturingTheCallbackQueue-ExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				43A3AD591EA0E11400A5C10B /* CapturingTheCallbackQueue_ExampleTests.swift */,
+				43467B142F6D6C0F00E5BFCE /* Tests */,
 				43A3AD5B1EA0E11400A5C10B /* Info.plist */,
 			);
 			path = "CapturingTheCallbackQueue-ExampleTests";
@@ -252,7 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43A3AD5A1EA0E11400A5C10B /* CapturingTheCallbackQueue_ExampleTests.swift in Sources */,
+				43467B152F6D6C0F00E5BFCE /* CapturingTheCallbackQueue_ExampleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,7 +344,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -391,7 +399,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -406,10 +414,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "CapturingTheCallbackQueue-Example/Application/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Boles.CapturingTheCallbackQueue-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -418,10 +431,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "CapturingTheCallbackQueue-Example/Application/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Boles.CapturingTheCallbackQueue-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -431,10 +449,15 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "CapturingTheCallbackQueue-ExampleTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Boles.CapturingTheCallbackQueue-ExampleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CapturingTheCallbackQueue-Example.app/CapturingTheCallbackQueue-Example";
 			};
 			name = Debug;
@@ -445,10 +468,15 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "CapturingTheCallbackQueue-ExampleTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Boles.CapturingTheCallbackQueue-ExampleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CapturingTheCallbackQueue-Example.app/CapturingTheCallbackQueue-Example";
 			};
 			name = Release;
