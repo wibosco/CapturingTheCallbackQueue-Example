@@ -24,8 +24,8 @@ class ViewController: UIViewController {
             case .success(let value):
                 self.updateLabel.text = value
                 self.updateLabel.textColor = .green
-            case .failure(let errror):
-                self.updateLabel.text = errror.localizedDescription
+            case .failure(let error):
+                self.updateLabel.text = error.localizedDescription
                 self.updateLabel.textColor = .red
             }
         }
