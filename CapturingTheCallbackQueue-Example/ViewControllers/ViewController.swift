@@ -12,20 +12,22 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var updateLabel: UILabel!
     
-    let queue: OperationQueue = OperationQueue()
-    
     // MARK: - ViewLifecycle
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let operation = CapturingOperation { _ in
-            self.updateLabel.text = "This label has been updated"
-            self.updateLabel.textColor = .green
-        }
+        let worker = CapturingQueueExample()
         
-        queue.addOperation(operation)
+        worker.performWork { result in
+            switch result {
+            case .success(let value):
+                self.updateLabel.text = value
+                self.updateLabel.textColor = .green
+            case .failure(let errror):
+                self.updateLabel.text = errror.localizedDescription
+                self.updateLabel.textColor = .red
+            }
+        }
     }
-
 }
-
